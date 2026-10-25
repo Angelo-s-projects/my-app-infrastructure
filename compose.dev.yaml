@@ -33,6 +33,11 @@ services:
     depends_on:
       - app
 
+  mailpit:
+    image: axllent/mailpit:latest
+    ports:
+      - "8025:8025"
+      - "1025:1025"
   db:
     image: mysql:8.4
     ports:
